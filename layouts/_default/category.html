@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <article>
+        <h1>Category: {{ .Title }}</h1>
+        <a href="/categories/">Show all categories</a>
+        <ul>
+        {{ range .Data.Pages.ByDate.Reverse }}
+            <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+        {{ end }}
+        </ul>
+    </article>
+{{ end }}

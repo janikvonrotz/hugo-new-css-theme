@@ -1,0 +1,40 @@
+baseurl = "https://example.org"
+languageCode = "en-us"
+title = "new.css theme"
+theme = "new-css"
+themesDir = "../../"
+googleAnalytics = ""
+disqusShortname = ""
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
+    page = "/:title/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "GitHub"
+    url = "https://janikvonrotz.ch/"
+    weight = 3
+
+[params]
+    description = "The web was made for semantic HTML—let's start using it."
+    subscribeURL = "https://mailchimp.com/"
+
+    [params.icon]
+    url = "/favicon.ico"
+
+    [params.archive]
+    url = "/archive/"
+    
+    [params.search]
+    url = "/search/"
+
+[outputs]
+    section = ["JSON", "HTML"]

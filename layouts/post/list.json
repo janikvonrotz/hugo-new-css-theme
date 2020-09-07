@@ -1,0 +1,10 @@
+[
+    {{ range $index, $value := where .Site.Pages "Type" "post" }}
+    {{ if $index }}, {{ end }}
+    {
+        "url": "{{ .RelPermalink }}",
+        "title": "{{ .Title }}",
+        "content": {{ .Content | plainify | jsonify }}
+    }
+    {{ end }}
+]

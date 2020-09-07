@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <article>
+        {{ partial "image.html" . }}<br>
+        <small>{{ .ReadingTime }} min read</small>
+        <h1>{{ .Title }}</h1>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <p>{{ .Content }}</p>
+        {{ partial "categories" . }}
+        <br>
+        {{ partial "tags" . }}
+    </article>
+</main>
+{{ template "_internal/disqus.html" . }}
+{{ end }}

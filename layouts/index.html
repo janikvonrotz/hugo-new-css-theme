@@ -1,0 +1,16 @@
+
+{{ define "main" }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
+{{ range $paginator.Pages }}
+    <article>
+        <a href="{{ .RelPermalink }}">{{ partial "image.html" . }}</a>
+        <a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <p>{{ .Summary }}</p>
+        <p><a href="{{ .RelPermalink }}">Read More...</a></p>
+        <hr>
+        <br>
+    </article>
+{{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}

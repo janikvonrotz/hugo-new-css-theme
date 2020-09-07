@@ -1,0 +1,5 @@
+<strong>Categories:</strong>
+{{ range $i, $e := .Params.categories }}
+{{if $i}},{{end}}
+<a href="/categories/{{ . | urlize }}">{{ . }}</a>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ range (where .Site.RegularPages "Section" "post").GroupByDate "2006" }}
+    <article>
+        <h1>{{ (dict "Title" .Key).Title }}</h1>
+        {{ range .Pages }}
+            <article>
+                <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
+            </article>
+        {{ end }}
+    </article>
+{{ end }}
+{{ end }}

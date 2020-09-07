@@ -1,0 +1,12 @@
+name = "new.css theme"
+license = "MIT"
+licenselink = "https://github.com/janikvonrotz/new-css/blob/master/LICENSE"
+description = "The web was made for semantic HTML—let's start using it."
+homepage = "https://janikvonrotz.ch/"
+tags = ["blog"]
+features = ["blog", "google analytics", "responsive", "disqus", "twitter cards", "dark mode"]
+min_version = "0.41"
+
+[author]
+  name = "Janik von Rotz"
+  homepage = "https://janikvonrotz.ch/"
