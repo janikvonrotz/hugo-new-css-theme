@@ -20,7 +20,7 @@ disqusShortname = ""
     weight = 2
 [[menu.main]]
     name = "GitHub"
-    url = "https://janikvonrotz.ch/"
+    url = "https://github.com/janikvonrotz"
     weight = 3
 
 [params]

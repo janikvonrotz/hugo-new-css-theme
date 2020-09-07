@@ -1,6 +1,6 @@
 name = "new.css theme"
 license = "MIT"
-licenselink = "https://github.com/janikvonrotz/new-css/blob/master/LICENSE"
+licenselink = "https://github.com/janikvonrotz/hugo-new-css-theme/blob/master/LICENSE"
 description = "The web was made for semantic HTML—let's start using it."
 homepage = "https://janikvonrotz.ch/"
 tags = ["blog"]
