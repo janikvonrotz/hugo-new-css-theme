@@ -1,4 +1,4 @@
-# new.css theme
+# Hugo new.css theme
 
 This hugo theme is made from vanilla html and the default [new.css](https://newcss.net/).
 
