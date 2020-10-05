@@ -10,8 +10,9 @@
         {{ partial "tags" . }}
     </article>
 </main>
-
-<script defer src="https://comment.apland.ch/js/commento.js"></script>
+{{ template "_internal/disqus.html" . }}
+{{ if .Site.Params.commentoUrl }}
+<script defer src="{{ .Site.Params.commentoUrl }}"></script>
 <div id="commento"></div>
-
+{{ end }}
 {{ end }}
