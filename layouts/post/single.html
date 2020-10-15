@@ -10,9 +10,14 @@
         {{ partial "tags" . }}
     </article>
 </main>
+
 {{ template "_internal/disqus.html" . }}
+
 {{ if .Site.Params.commentoUrl }}
 <script defer src="{{ .Site.Params.commentoUrl }}"></script>
 <div id="commento"></div>
 {{ end }}
+
+{{ partial "remark42.html" . }}
+
 {{ end }}
