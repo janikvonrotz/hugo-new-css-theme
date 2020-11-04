@@ -4,7 +4,7 @@ licenselink = "https://github.com/janikvonrotz/hugo-new-css-theme/blob/master/LI
 description = "The web was made for semantic HTML—let's start using it."
 homepage = "https://janikvonrotz.ch/"
 tags = ["blog"]
-features = ["blog", "google analytics", "responsive", "disqus", "twitter cards", "dark mode"]
+features = ["blog", "google analytics", "responsive", "disqus", "twitter cards", "dark mode", "remark42", "plausible analytics"]
 min_version = "0.41"
 
 [author]
