@@ -1,0 +1,5 @@
+
+{{ if .Site.Params.plausibleAnalaytics }}
+<br>
+<a target="_blank" href="https://plausible.io/{{ .Site.Params.plausibleAnalaytics }}?page={{ .Page.RelPermalink }}">Show statistic for this page</a>
+{{ end }}
