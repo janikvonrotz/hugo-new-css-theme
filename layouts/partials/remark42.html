@@ -3,9 +3,18 @@
 <div id="remark42"></div>
 
 <script>
+
+if(typeof window.matchMedia === 'function'){
+    var mq = window.matchMedia('(prefers-color-scheme: dark)')
+    isDark = mq.matches
+    mq.addListener(() => { 
+        window.REMARK42.changeTheme(mq.matches ? 'dark' : 'light');
+    })
+}
 var remark_config = {
     host: "{{ .Site.Params.remark42.url }}",
     site_id: "{{ .Site.Params.remark42.siteId }}",
+    theme:isDark ? 'dark' : 'light'
 };
 
 (function(c) {
@@ -16,6 +25,7 @@ var remark_config = {
     (d.head || d.body).appendChild(s);
     }
 })(remark_config.components || ['embed']);
+
 </script>
 
 {{ end }}
