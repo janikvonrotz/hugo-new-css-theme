@@ -10,13 +10,11 @@
     {{ end }}
     <a href="/categories">Categories</a> /
     <a href="/tags">Tags</a> /
-    <a href="{{ .Site.RSSLink }}" type="application/rss+xml" target="_blank">RSS feed</a> /
     {{ if .Site.Params.subscribeURL }}
     <a href="{{ .Site.Params.subscribeURL }}" target="blank">Subscribe</a> /
     {{ end }}
     <a href="https://gohugo.io/">Made with Hugo</a>
 </footer>
-{{ template "_internal/google_analytics.html" . }}
 {{ partial "plausible.html" . }}
 </body>
 </html>
