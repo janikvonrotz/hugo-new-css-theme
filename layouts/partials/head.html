@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ hugo.Generator }}
-    
+    {{ hugo.Generator }}    
     {{ if eq .RelPermalink "/" }}
     <title>{{ .Title }}</title>
     {{ else }}
     <title>{{ .Site.Title }} - {{ .Title }}</title>
     {{ end }}
-
+    <link rel="shortcut icon" href="{{ .Site.Params.icon.url }}" type="image/x-icon"/>
     {{ if eq .RelPermalink "/" }}
     <meta property="description" content="{{ .Site.Params.description }}">
     {{ else if .Description }}
     <meta property="description" content="{{ .Description }}">
     {{ end }}
-
+    {{ if .Site.Params.fediverse.url }}
+    <meta name="fediverse:creator" content="{{ .Site.Params.fediverse.url }}">
+    {{ end }}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
 
-    <link rel="shortcut icon" href="{{ .Site.Params.icon.url }}" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
     <link rel="stylesheet" href="https://newcss.net/theme/terminal.css">
@@ -34,5 +34,6 @@
             overflow-wrap: break-word;
         }
     </style>
+    
 </head>
 <body>
