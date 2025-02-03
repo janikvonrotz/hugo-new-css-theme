@@ -4,17 +4,10 @@
 
 <script>
 
-if(typeof window.matchMedia === 'function'){
-    var mq = window.matchMedia('(prefers-color-scheme: dark)')
-    isDark = mq.matches
-    mq.addListener(() => { 
-        window.REMARK42.changeTheme(mq.matches ? 'dark' : 'light');
-    })
-}
 var remark_config = {
     host: "{{ .Site.Params.remark42.url }}",
     site_id: "{{ .Site.Params.remark42.siteId }}",
-    theme:isDark ? 'dark' : 'light'
+    theme: "dark"
 };
 
 (function(c) {
